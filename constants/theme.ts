@@ -1,53 +1,47 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Real Mirror — Design System
+ * Tiffany: clean white canvas with iconic blue-green teal accents
  */
 
-import { Platform } from 'react-native';
+// ── Backgrounds (light, airy) ──
+// ── Tiffany teal accent system ──
+// ── Text (high-contrast on white) ──
+// ── Semantic ──
+export const C = {
+  bg:       '#FFFFFF',   // Pure white — main canvas
+  surface:  '#F2FDFC',   // Barely-tinted teal surface
+  card:     '#FFFFFF',   // Cards (defined by border, not fill)
+  cardElev: '#E6F9F7',   // Tinted — inputs, elevated elements
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+  border:       'rgba(10, 186, 181, 0.12)',
+  borderMed:    'rgba(10, 186, 181, 0.24)',
+  borderStrong: 'rgba(10, 186, 181, 0.45)',
 
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+  // Tiffany teal (maps onto all former "gold" keys)
+  gold:       '#0ABAB5',
+  goldLight:  '#5DD6D2',
+  goldDeep:   '#07908C',
+  goldBg:     'rgba(10, 186, 181, 0.08)',
+  goldBorder: 'rgba(10, 186, 181, 0.22)',
+
+  text:  '#142423',   // Near-black with teal warmth
+  text2: '#4A7A77',   // Readable mid-teal
+  text3: '#8ABAB7',   // Muted — labels, placeholders
+
+  green: '#2AADAA',
+  red:   '#DC7070',
+  star:  '#F0B840',
+} as const;
+
+// Gradient pairs for expo-linear-gradient
+export const GRAD = {
+  gold:   ['#0ABAB5', '#07908C'] as [string, string],
+  amazon: ['#FFC040', '#E88800'] as [string, string],
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-  },
-});
+// Legacy stubs — keep Expo boilerplate files happy
+export const Colors = {
+  light: { text: C.text,  background: C.bg, tint: C.gold, icon: C.text2, tabIconDefault: C.text3, tabIconSelected: C.gold },
+  dark:  { text: C.text,  background: C.bg, tint: C.gold, icon: C.text2, tabIconDefault: C.text3, tabIconSelected: C.gold },
+};
+export const Fonts = { regular: 'System', bold: 'System', rounded: 'System', mono: 'System' };

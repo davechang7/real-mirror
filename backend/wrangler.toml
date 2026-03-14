@@ -1,0 +1,10 @@
+name            = "real-mirror-proxy"
+main            = "worker.js"
+compatibility_date = "2024-09-23"
+
+# Secrets are NEVER stored here — set them via the CLI:
+#
+#   wrangler secret put GEMINI_API_KEY
+#   wrangler secret put PROXY_SECRET
+#
+# Use the same PROXY_SECRET value in the app's .env file.
