@@ -16,12 +16,22 @@
 </head>
 <body>
   <h1>Real Mirror – Privacy Policy</h1>
-  <p class="updated">Last updated: March 30, 2026</p>
+  <p class="updated">Last updated: April 2, 2026</p>
 
   <p>Real Mirror ("we", "us", or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights.</p>
 
+  <h2>Camera &amp; Face Data</h2>
+  <p>Real Mirror uses your device camera to capture a still photo of your face when you tap "AI Face Scan." Before this happens, the app displays a clear disclosure and requires your explicit consent.</p>
+  <ul>
+    <li><strong>What is collected:</strong> A single still photo of your face, captured at the moment you initiate a scan.</li>
+    <li><strong>How it is used:</strong> The photo is sent to Google Gemini AI solely to generate a one-time cosmetic facial analysis (e.g., skin tone, symmetry, feature proportions). It is never used for identity verification, advertising, or any other purpose.</li>
+    <li><strong>Who it is shared with:</strong> The photo is transmitted to Google's Gemini API via our Cloudflare proxy server. No other third parties receive the image.</li>
+    <li><strong>How long it is retained:</strong> The photo is <strong>not stored</strong> on any server. It exists only in memory for the duration of the API call (typically 2–5 seconds) and is permanently discarded immediately after the AI response is returned.</li>
+    <li><strong>No biometric data:</strong> We do not extract, store, or use facial geometry, landmarks, or biometric identifiers of any kind.</li>
+  </ul>
+
   <h2>1. Information We Collect</h2>
-  <p><strong>Camera &amp; Face Images:</strong> When you use the AI Face Scan feature, your device camera captures a photo. This image is sent securely to a third-party AI service (Google Gemini) via an encrypted proxy server solely to generate cosmetic analysis results. The image is <strong>not stored</strong> on our servers and is discarded immediately after analysis.</p>
+  <p><strong>Camera &amp; Face Images:</strong> When you use the AI Face Scan feature, your device camera captures a photo. This image is sent securely to Google Gemini AI via an encrypted Cloudflare proxy server solely to generate cosmetic analysis results. The image is <strong>not stored</strong> on our servers and is discarded immediately after analysis. You will be asked for your explicit consent before your first scan.</p>
   <p><strong>Usage Data:</strong> We store a daily scan count and workout usage flag locally on your device using AsyncStorage. This data never leaves your device.</p>
   <p><strong>Purchase Information:</strong> Subscription and purchase data is handled by RevenueCat and Apple. We do not store your payment details.</p>
 
